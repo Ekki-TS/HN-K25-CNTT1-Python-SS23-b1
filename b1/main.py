@@ -34,3 +34,29 @@ for shipment in shipments:
         print(f" + Trạng thái: 🔴 CẢNH BÁO (Trễ hạn! Deadline yêu cầu lúc {deadline.time()})")
 
 print("========================================================")
+
+"""
+1. Tại sao from math import * là Anti-pattern?
+
+=> Vì import * sẽ import toàn bộ hàm và biến trong thư viện math vào chương trình.
+
+Tác hại:
+- Ô nhiễm namespace.
+- Dễ trùng tên hàm với code tự viết.
+- Khó đọc và khó bảo trì.
+- Tốn tài nguyên hơn khi chỉ dùng vài hàm.
+
+Cách import an toàn:
+import math
+distance = math.sqrt(25) hoặc from math import sqrt
+=> dùng gì thì import nấy.
+
+2. Để biến thư mục thành Package cần tệp nào?
+=> Cần tạo file:
+__init__.py
+Vai trò:
+- Đánh dấu thư mục là Package.
+- Cho phép import module bên trong.
+- Có thể dùng để gom hoặc khởi tạo package.
+
+"""
